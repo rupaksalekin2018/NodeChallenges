@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<main class="bg-dark text-white min-vh-100">
+  <div class="container h-100 justify-content-between pt-sm pt-5 pb-5">
+    <%for (const element of homeValues){%>
+    <div class="card bg-dark text-white mb-4 border border-info">
+      <div class="card-body">
+        <h5 class="card-title"><%=element.title%></h5>
+        <p class="lead"><%=element.value%></p>
+        <a class="btn btn-info" href="/<%=element.id%>">Read More</a>
+      </div>
+    </div>
+    <%}%>
+  </div>
+</main>
+<%- include('partials/footer') %>
+
+<!-- <h5 class="card-title">Card title</h5>
+<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+<p class="card-text">
+  Some quick example text to build on the card title and make up the bulk of the
+  card's content.
+</p>
+<a href="#" class="card-link">Card link</a>
+<a href="#" class="card-link">Another link</a> -->
